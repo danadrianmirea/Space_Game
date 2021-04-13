@@ -1,6 +1,6 @@
 # Space_Game
 A game like "Chicken Invaders", developed in pygame (a python package)\
-My fist experience with using pygame!
+My fist experience in using pygame!
 
 ### Run Guide:
 -------
