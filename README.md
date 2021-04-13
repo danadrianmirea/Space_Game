@@ -9,6 +9,4 @@ open cmd/terminal and enter:
 python Space_Game_main.py
 ```
 
-### Credits:
---------
 Copyright © **[Mehrshad Dadashzadeh](https://www.linkedin.com/in/mehrshad-dadashzadeh-7053491b3/)** Sprint 2020
