@@ -1,2 +1,0 @@
-open cmd in folder and type:
-python Space_Game_main.py
