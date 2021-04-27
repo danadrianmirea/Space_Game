@@ -1,0 +1,298 @@
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+
+$bg-url: ".Images/Textures/stars_galaxy.jpg";
+$bg-width: 938px;
+$bg-height: 1668px;
+$scroll_speed: 10s;
+$missile_scale: 0.7;
+
+@-webkit-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: $bg-width $bg-height;
+  }
+}
+
+@-moz-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: $bg-width $bg-height;
+  }
+}
+
+@-o-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: $bg-width $bg-height;
+  }
+}
+
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: $bg-width $bg-height;
+  }
+}
+
+@-webkit-keyframes bg-scrolling {
+  0% {
+    background-position: $bg-width $bg-height;
+  }
+}
+
+@-moz-keyframes bg-scrolling {
+  0% {
+    background-position: $bg-width $bg-height;
+  }
+}
+
+@-o-keyframes bg-scrolling {
+  0% {
+    background-position: $bg-width $bg-height;
+  }
+}
+
+@keyframes bg-scrolling {
+  0% {
+    background-position: $bg-width $bg-height;
+  }
+}
+
+body {
+  margin-top: 0.5rem;
+
+  color: #999;
+  font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+  text-align: center;
+  background: url($bg-url) repeat 0 0;
+
+  -webkit-animation: bg-scrolling-reverse $scroll_speed infinite;
+  -moz-animation: bg-scrolling-reverse $scroll_speed infinite;
+  -o-animation: bg-scrolling-reverse $scroll_speed infinite;
+  animation: bg-scrolling-reverse $scroll_speed infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+
+  &::before {
+    content: "Space_Game";
+
+    font-size: 5rem;
+    font-weight: 100;
+    font-style: normal;
+  }
+
+  p {
+    color: white;
+    font-size: 2rem;
+    font-weight: 100;
+    font-style: normal;
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+  li{
+    list-style-type: none;
+  }
+
+  hr {
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, #f0f0f000, #8c8b8b, #f0f0f000);
+    background-image: -moz-linear-gradient(left, #f0f0f000, #8c8b8b, #f0f0f000);
+    background-image: -ms-linear-gradient(left, #f0f0f000, #8c8b8b, #f0f0f000);
+    background-image: -o-linear-gradient(left, #f0f0f000, #8c8b8b, #f0f0f000);
+  }
+}
+
+.glitch {
+  font: {
+    size: 1.5em;
+    family: ubuntu;
+    weight: 700;
+
+  }
+
+  text-decoration: none;
+  text-transform: uppercase;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  letter-spacing: 5px;
+
+  &:before,
+  &:after {
+    display: block;
+    content: attr(data-glitch);
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.8;
+  }
+
+  &:after {
+    color: #f0f;
+    z-index: -2;
+  }
+
+  &:before {
+    color: #0ff;
+    z-index: -1;
+  }
+
+  &:hover {
+    &:before {
+      animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite
+    }
+
+    &:after {
+      animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite
+    }
+  }
+}
+
+.missile {
+  // display: inline;
+  position: absolute;
+  justify-content: space-around;
+  // align-items: center;
+  bottom: 0;
+  left: 30%;
+
+  img {
+    animation: missile ease 20s infinite;
+    opacity: 0;
+    transform: scale($missile_scale);
+  }
+
+  img:nth-child(1) {
+    animation-delay: 3s;
+    animation-duration: 24s;
+  }
+
+  img:nth-child(2) {
+    animation-direction: reverse;
+    animation-delay: 36s;
+    animation-duration: 21s;
+  }
+
+
+  img:nth-child(3) {
+    animation-direction: reverse;
+    animation-delay: 19s;
+    animation-duration: 27s;
+  }
+
+  img:nth-child(4) {
+    animation-direction: reverse;
+    animation-delay: 32s;
+    animation-duration: 26s;
+  }
+
+  img:nth-child(5) {
+    animation-direction: reverse;
+    animation-delay: 14s;
+    animation-duration: 35s;
+  }
+
+  img:nth-child(6) {
+    animation-direction: reverse;
+    animation-delay: 18s;
+    animation-duration: 28s;
+  }
+
+  img:nth-child(7) {
+    animation-direction: reverse;
+    animation-delay: 62s;
+    animation-duration: 46s;
+  }
+
+  img:nth-child(8) {
+    animation-direction: reverse;
+    animation-delay: 26s;
+    animation-duration: 31s;
+  }
+
+  img:nth-child(9) {
+    animation-delay: 17s;
+    animation-duration: 27s;
+  }
+}
+
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em adjust-hue(#ffa260, 45deg);
+  transform: translateY(-0.25em);
+}
+
+button {
+  color: #ffa260;
+  transition: 0.25s;
+
+  &:hover,
+  &:focus {
+    border-color: adjust-hue(#ffa260, 45deg);
+    color: #fff;
+  }
+}
+
+button {
+  background: rgba(0, 0, 0, 0.384);
+  border: 2px solid;
+  border-radius: 8%;
+  font: inherit;
+  margin: 1em;
+  padding: 1em 3em;
+}
+
+
+@keyframes missile {
+  0% {
+    transform: translateY(0) scale($missile_scale);
+    opacity: 0;
+  }
+
+  5% {
+    transform: translateY(5) scale($missile_scale);
+    opacity: 1;
+  }
+
+  95% {
+    transform: translateY(95) scale($missile_scale);
+    opacity: 1;
+
+  }
+
+  100% {
+    transform: translateY(-100vh) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0)
+  }
+
+  20% {
+    transform: translate(-5px, 5px)
+  }
+
+  40% {
+    transform: translate(-5px, -5px)
+  }
+
+  60% {
+    transform: translate(5px, 5px)
+  }
+
+  80% {
+    transform: translate(5px, -5px)
+  }
+
+  to {
+    transform: translate(0)
+  }
+}
