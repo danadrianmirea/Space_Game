@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Exo:100);
 
-$bg-url: ".Images/Textures/stars_galaxy.jpg";
+$bg-url: "Images/Textures/stars_galaxy.jpg";
 $bg-width: 938px;
 $bg-height: 1668px;
 $scroll_speed: 10s;
@@ -90,7 +90,8 @@ body {
       text-decoration: none;
     }
   }
-  li{
+
+  li {
     list-style-type: none;
   }
 

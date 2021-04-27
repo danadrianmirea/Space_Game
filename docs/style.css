@@ -52,7 +52,7 @@ body {
   color: #999;
   font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
   text-align: center;
-  background: url(".Images/Textures/stars_galaxy.jpg") repeat 0 0;
+  background: url("Images/Textures/stars_galaxy.jpg") repeat 0 0;
   -webkit-animation: bg-scrolling-reverse 10s infinite;
   -moz-animation: bg-scrolling-reverse 10s infinite;
   -o-animation: bg-scrolling-reverse 10s infinite;
