@@ -167,7 +167,8 @@ body {
     opacity: 0;
     transform: scale($missile_scale);
   }
-  img:hover{
+
+  img:hover {
     animation-play-state: paused;
   }
 
