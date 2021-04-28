@@ -150,6 +150,10 @@ body hr {
   transform: scale(0.7);
 }
 
+.missile img:hover {
+  animation-play-state: paused;
+}
+
 .missile img:nth-child(1) {
   animation-delay: 3s;
   animation-duration: 24s;

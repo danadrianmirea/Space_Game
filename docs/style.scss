@@ -167,6 +167,9 @@ body {
     opacity: 0;
     transform: scale($missile_scale);
   }
+  img:hover{
+    animation-play-state: paused;
+  }
 
   img:nth-child(1) {
     animation-delay: 3s;
